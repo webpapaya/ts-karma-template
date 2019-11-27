@@ -4,7 +4,7 @@ describe("a testsuite", () => {
     expect(true).toBeTruthy();
   });
 
-  it('should assert strings', () => {
+  it('should use jasmin expect', () => {
     expect("Roland Germ").toStartWith("Roland");
   });
 
