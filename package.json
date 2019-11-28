@@ -9,7 +9,7 @@
     "author": "rolger",
     "dependencies": {
         "@types/jasmine": "^3.5.0",
-        "@types/jasmine-expect": "^3.8.1",
+        "@types/node": "^12.12.14",
         "jasmine-core": "^3.5.0",
         "jasmine-expect": "^4.0.3",
         "karma": "^4.4.1",
@@ -18,7 +18,12 @@
         "karma-jasmine": "^2.0.1",
         "karma-jasmine-html-reporter": "^1.4.2",
         "karma-jasmine-matchers": "^4.0.2",
-        "karma-typescript": "~2.0.9",
+        "karma-typescript": "^4.1.1",
         "typescript": "latest"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.2.5",
+        "add-matchers": "^0.6.2",
+        "chai": "^4.2.0"
     }
 }

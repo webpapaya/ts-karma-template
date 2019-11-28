@@ -3,18 +3,19 @@
 module.exports = function(config) {
     config.set({
         basePath: '',
-        frameworks: ["jasmine", "karma-typescript", 'jasmine-matchers'],
+        frameworks: ['jasmine', 'karma-typescript', 'jasmine-matchers'],
 
         files: [
+            { pattern: "test.ts" },
             { pattern: "src/**/*.ts" }
         ],
         client: {
             clearContext: false // leave Jasmine Spec Runner output visible in browser
         },
         preprocessors: {
-            "src/**/*.ts": ["karma-typescript"]
-        },
+            "src/**/*.ts": ["karma-typescript"],
 
+        },
         reporters: ['progress', 'kjhtml'],
         port: 9876,
         colors: true,
@@ -22,6 +23,6 @@ module.exports = function(config) {
         autoWatch: true,
         browsers: ['Chrome'],
         singleRun: false,
-        restartOnFileChange: true
+        restartOnFileChange: false
     })
 }
