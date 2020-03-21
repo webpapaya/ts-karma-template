@@ -19,8 +19,8 @@ class Cell {
 
 describe("game of life mob", () => {
 
-  it('cell without neighbors should die', () => {
-    let cell = new Cell(false);
+  it('alive cell without neighbors should die', () => {
+    let cell = new Cell(true);
     let newCell = cell.evolveByLivingNeighborCount(0);
     expect(newCell.alive()).toBeFalse();
   });
