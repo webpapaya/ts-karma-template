@@ -1,5 +1,6 @@
 import  { expect as bla } from 'chai';
 
+type
 class Cell {
   private readonly isAlive: boolean;
 
