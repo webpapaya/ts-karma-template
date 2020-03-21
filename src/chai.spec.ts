@@ -18,4 +18,9 @@ describe("game of life mob", () => {
     expect(cell.alive()).toBeFalse()
   });
 
+  it('dead cell with 3 neighbors comes alive', () => {
+    let cell = new Cell();
+    cell.evolveByLivingNeighborCount(3)
+    expect(cell.alive()).toBeTrue()
+  })
 });
