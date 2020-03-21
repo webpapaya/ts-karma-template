@@ -1,12 +1,14 @@
 import  { expect as bla } from 'chai';
 
 class Cell {
-  evolveByLivingNeighborCount(neighbors: number) {
+  private isAlive: boolean;
 
+  evolveByLivingNeighborCount(neighbors: number) {
+    this.isAlive = neighbors === 3;
   }
 
-  alive() : boolean{
-    return false;
+  alive() {
+    return this.isAlive;
   }
 }
 
@@ -15,7 +17,7 @@ describe("game of life mob", () => {
   it('cell without neighbors should die', () => {
     let cell = new Cell();
     cell.evolveByLivingNeighborCount(0);
-    expect(cell.alive()).toBeFalse()
+    expect(cell.alive()).toEqual(undefined);
   });
 
   it('dead cell with 3 neighbors comes alive', () => {
